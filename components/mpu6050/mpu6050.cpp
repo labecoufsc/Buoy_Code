@@ -81,7 +81,7 @@ void MPU6050::getAccel(int16_t *x, int16_t *y, int16_t *z) {
 	*y = round((*y - A_OFF_Y) * 1000.0 / ACCEL_SENS) / 1000.0;
 	*z = round((*z - A_OFF_Z) * 1000.0 / ACCEL_SENS) / 1000.0;
 }
-
+//Cálculo de Calibração
 void MPU6050::getOffsets(float *ax_off, float *ay_off, float *az_off, float *gr_off, float *gp_off, float *gy_off) {
 	float gyro_off[3]; //Temporary storage
 	float accel_off[3];
